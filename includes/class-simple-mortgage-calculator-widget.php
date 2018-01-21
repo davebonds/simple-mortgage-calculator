@@ -84,7 +84,7 @@ class Simple_Mortgage_Calculator_Widget extends WP_Widget {
 	 * @param array $old_instance Previously saved values from database.
 	 * @return array Updated safe values to be saved.
 	 */
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title']        = strip_tags( $new_instance['title'] );
 		$instance['principal']    = (int) $new_instance['principal'];
@@ -124,33 +124,33 @@ class Simple_Mortgage_Calculator_Widget extends WP_Widget {
 		}
 		?>
 		<form action="<?php echo admin_url( 'admin-ajax.php' ); ?>" class="<?php echo $this->plugin_name; ?>" method="post" name="<?php echo $this->plugin_name; ?>">
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label principal">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="principal" <?php echo ( ! empty( $instance['principal'] ) ) ? 'placeholder="' . $instance['principal'] . '"' : ''; ?>>
 				<label class="mdl-textfield__label" for="principal">Principal</label>
 				<span class="mdl-textfield__error">Principal is not a number!</span>
 			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label down-payment">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="down_payment" <?php echo ( ! empty( $instance['down_payment'] ) ) ? 'placeholder="' . $instance['down_payment'] . '"' : ''; ?>>
 				<label class="mdl-textfield__label" for="down_payment">Down Payment</label>
 				<span class="mdl-textfield__error">Down Payment is not a number!</span>
 			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label term">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="term" <?php echo ( ! empty( $instance['term'] ) ) ? 'placeholder="' . $instance['term'] . '"' : ''; ?>>
 				<label class="mdl-textfield__label" for="term">Term (in years)</label>
 				<span class="mdl-textfield__error">Term (in years) is not a number!</span>
 			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label apr">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="apr" <?php echo ( ! empty( $instance['apr'] ) ) ? 'placeholder="' . $instance['apr'] . '"' : ''; ?>>
 				<label class="mdl-textfield__label" for="apr">APR %</label>
 				<span class="mdl-textfield__error">APR is not a number!</span>
 			</div>
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect calculate" type="submit">
 				Calculate
 			</button>
 			<div class="monthly-payment">
 				Your estimated monthly payment is:
 				<div class="amount">$
-					<input></input>
+					<input class="result"></input>
 					<div class="loader" style="display: none;">
 						<div class="line"></div>
 						<div class="line"></div>

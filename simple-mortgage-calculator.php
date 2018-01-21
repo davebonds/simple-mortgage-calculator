@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is a simple mortgage calculator that will give a monthly payment based on the principal of the loan / the term + apr
+ * This is a simple mortgage calculator.
  *
  * @link              https://davebonds.com
  * @since             1.0.0
