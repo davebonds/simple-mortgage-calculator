@@ -1,0 +1,117 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Material Design Lite */
+
+// Variables and mixins
+
+@import "variables";
+@import "mixins";
+
+// Resets and dependencies
+// @import "resets/resets";
+// @import "typography/typography";
+
+// Components
+@import "palette/palette";
+@import "ripple/ripple";
+@import "animation/animation";
+@import "button/button";
+@import "textfield/textfield";
+
+
+/**
+ * Simple Mortgage Calculator Widget
+ */
+.simple-mortgage-calculator input {
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+.simple-mortgage-calculator button {
+	display: block;
+	margin: 0 auto;
+}
+.simple-mortgage-calculator .monthly-payment {
+	position: relative;
+	padding: 15px 20px;
+	margin: 15px auto;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.simple-mortgage-calculator .monthly-payment .amount {
+	text-align: center;
+	display: block;
+	font-size: 24px;
+	color: green;
+	font-weight: 700;
+}
+.simple-mortgage-calculator .monthly-payment .amount input {
+	max-width: 110px;
+	font-size: 24px;
+	color: green;
+	font-weight: 700;
+}
+
+/**
+ * Loader animation
+ */
+
+.simple-mortgage-calculator .loader {
+	position: absolute;
+	top: 50%;
+	left: 48%;
+}
+
+.simple-mortgage-calculator .line {
+	animation: expand 1s ease-in-out infinite;
+	border-radius: 10px;
+	display: inline-block;
+	transform-origin: center center;
+	margin: 0 3px;
+	width: 1px;
+	height: 15px;
+}
+
+.simple-mortgage-calculator .line:nth-child(1) {
+	background: #27ae60;
+}
+
+.simple-mortgage-calculator .line:nth-child(2) {
+	animation-delay: 180ms;
+	background: #f1c40f;
+}
+
+.simple-mortgage-calculator .line:nth-child(3) {
+	animation-delay: 360ms;
+	background: #e67e22;
+}
+
+.simple-mortgage-calculator .line:nth-child(4) {
+	animation-delay: 540ms;
+	background: #2980b9;
+}
+
+@keyframes expand {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(2);
+	}
+}

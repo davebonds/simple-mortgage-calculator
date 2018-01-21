@@ -1,0 +1,8 @@
+.DS_Store
+.DS_Store?
+.Trashes
+node_modules
+composer.lock
+*.swp
+*.swo
+.bash_profile
