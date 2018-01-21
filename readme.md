@@ -1,4 +1,4 @@
-# Plugin Name #
+# Simple Mortgage Calculator #
 **Contributors:** [davebonds](https://profiles.wordpress.org/davebonds)  
 **Tags:** mortgage, calculator, calc  
 **Requires at least:** 4.9  
@@ -17,11 +17,7 @@ This is a simple mortgage calculator that will give a monthly payment based on t
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
-1. Upload `simple-mortgage-calculator.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Install via Plugins > Add New using .zip file
 
 ## Frequently Asked Questions ##
 
@@ -31,11 +27,7 @@ File an issue on Github
 
 ## Screenshots ##
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Screenshot 1
 
 ## Changelog ##
 
