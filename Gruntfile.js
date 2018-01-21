@@ -12,8 +12,24 @@ module.exports = function(grunt) {
         },
         files: {
           'public/css/simple-mortgage-calculator-public.css': 'public/css/simple-mortgage-calculator-public.scss'
-        }
-      }
+        },
+      },
+    },
+
+    wp_readme_to_markdown: {
+      your_target: {
+        files: {
+          'readme.md': 'README.txt'
+        },
+      },
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'public/js/simple-mortgage-calculator-public.min.js': 'public/js/simple-mortgage-calculator-public.js'
+        },
+      },
     },
 
     // wpcss: {
@@ -55,6 +71,7 @@ module.exports = function(grunt) {
         files: 'public/css/*.scss',
         tasks: ['sass']
       },
+
       // wpcss: {
       //   files: 'scss/**/*.scss',
       //   tasks: ['wpcss']
@@ -66,8 +83,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   //grunt.loadNpmTasks('grunt-wp-css');
   grunt.loadNpmTasks('grunt-wp-i18n');
+  grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['sass', 'makepot']);
+  grunt.registerTask('build', ['sass', 'makepot', 'wp_readme_to_markdown', 'uglify']);
   grunt.registerTask('default', ['build','watch']);
 };

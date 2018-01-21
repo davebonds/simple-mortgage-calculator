@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Simple Mortgage Calculator 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "http://wordpress.org/support/plugin/simple-mortgage-calculator\n"
-"POT-Creation-Date: 2018-01-21 02:04:28+00:00\n"
+"POT-Creation-Date: 2018-01-21 06:11:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: includes/class-simple-mortgage-calculator-widget.php:57
+#: includes/class-simple-mortgage-calculator-widget.php:48
 msgid "Display a mortgage calculator."
 msgstr ""
 
@@ -33,19 +33,23 @@ msgstr ""
 msgid "Simple Mortgage Calculator"
 msgstr ""
 
-#: includes/class-simple-mortgage-calculator-widget.php:175
+#: includes/class-simple-mortgage-calculator-widget.php:181
 msgid "Title:"
 msgstr ""
 
-#: includes/class-simple-mortgage-calculator-widget.php:179
+#: includes/class-simple-mortgage-calculator-widget.php:185
 msgid "Default Loan Principal"
 msgstr ""
 
-#: includes/class-simple-mortgage-calculator-widget.php:183
+#: includes/class-simple-mortgage-calculator-widget.php:189
+msgid "Default Down Payment"
+msgstr ""
+
+#: includes/class-simple-mortgage-calculator-widget.php:193
 msgid "Default Term (in years)"
 msgstr ""
 
-#: includes/class-simple-mortgage-calculator-widget.php:187
+#: includes/class-simple-mortgage-calculator-widget.php:197
 msgid "Default APR %"
 msgstr ""
 

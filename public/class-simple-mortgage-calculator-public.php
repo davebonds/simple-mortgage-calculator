@@ -74,7 +74,7 @@ class Simple_Mortgage_Calculator_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/simple-mortgage-calculator-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/simple-mortgage-calculator-public.min.js', array( 'jquery' ), $this->version, false );
 		wp_localize_script( $this->plugin_name, 'SMC_Ajax',
 			array(
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
