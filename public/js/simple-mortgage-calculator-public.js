@@ -2,7 +2,7 @@
 	'use strict';
 
 	$(document).on('click','.simple-mortgage-calculator button', function(e) {
-    	e.preventDefault();
+		e.preventDefault();
 		// Show loader.
 		$('.simple-mortgage-calculator .loader').show();
 		$('.monthly-payment input').val('');
@@ -41,11 +41,11 @@
 	});
 
 	$(document).on('change', 'input#principal, input#down_payment, input#term, input#apr', function() {
-    	// Show loader.
+		// Show loader.
 		$('.simple-mortgage-calculator .loader').show();
 		$('.monthly-payment input').val('');
 
-    	// Get vars
+		// Get vars
 		var principal    = $('input#principal').val();
 		var down_payment = $('input#down_payment').val();
 		var term         = $('input#term').val();

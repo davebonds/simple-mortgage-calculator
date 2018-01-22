@@ -24,14 +24,12 @@
 // @import "resets/resets";
 // @import "typography/typography";
 
-
 // Components
 @import "palette/palette";
 @import "ripple/ripple";
 @import "animation/animation";
 @import "button/button";
 @import "textfield/textfield";
-
 
 /**
  * Simple Mortgage Calculator Widget
@@ -41,7 +39,7 @@
 	box-shadow: none;
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 20px;
 }
 .simple-mortgage-calculator button {
 	display: block;
@@ -51,20 +49,21 @@
 	position: relative;
 	padding: 15px 20px;
 	margin: 15px auto;
-	font-size: 18px;
+	font-size: 20px;
 	border: 1px solid #ccc;
 	text-align: center;
 }
 .simple-mortgage-calculator .monthly-payment .amount {
 	text-align: center;
 	display: block;
-	font-size: 24px;
+	font-size: 26px;
 	color: green;
 	font-weight: 700;
 }
 .simple-mortgage-calculator .monthly-payment .amount input {
 	max-width: 110px;
 	font-size: 24px;
+	background: transparent;
 	color: green;
 	font-weight: 700;
 }

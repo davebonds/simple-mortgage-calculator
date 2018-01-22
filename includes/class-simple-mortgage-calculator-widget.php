@@ -148,9 +148,9 @@ class Simple_Mortgage_Calculator_Widget extends WP_Widget {
 				Calculate
 			</button>
 			<div class="monthly-payment">
-				Your estimated monthly payment is:
+				Estimated monthly payment is:
 				<div class="amount">$
-					<input class="result"></input>
+					<input class="result" readonly></input>
 					<div class="loader" style="display: none;">
 						<div class="line"></div>
 						<div class="line"></div>

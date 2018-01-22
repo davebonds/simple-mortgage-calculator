@@ -131,4 +131,41 @@ class Simple_Mortgage_Calculator_Public {
 
 		return number_format( $payment, 2 );
 	}
+
+	/**
+	 * Output mortgage calculator using shortcode.
+	 *
+	 * @uses   Simple_Mortgage_Calculator_Widget
+	 * @param  array   $atts Widget arguments.
+	 * @return string        HTML widget output.
+	 */
+	public function shortcode( $atts ) {
+
+		// Default widget args.
+		$args = array(
+			'before_widget' => '<section class="widget widget-area ' . $this->plugin_name . ' shortcode">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title widgettitle">',
+			'after_title'   => '</h4>',
+		);
+
+		// Merge atts with defaults
+		$instance = shortcode_atts(
+			array(
+				'principal'    => 350000,
+				'down_payment' => 35000,
+				'term'         => 30,
+				'apr'          => 3.9,
+			),
+			$atts
+		);
+
+		// Instantiate widget class
+		$widget = new Simple_Mortgage_Calculator_Widget( $this->plugin_name, $this->version );
+
+		// Return widget
+		return $widget->widget( $args, $instance );
+
+	}
+
 }

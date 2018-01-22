@@ -158,6 +158,7 @@ class Simple_Mortgage_Calculator {
 		$this->loader->add_action( 'widgets_init', $plugin_public, 'register_widget' );
 		$this->loader->add_action( 'wp_ajax_smc_ajax_callback', $plugin_public, 'smc_ajax_callback' );
 		$this->loader->add_action( 'wp_ajax_nopriv_smc_ajax_callback', $plugin_public, 'smc_ajax_callback' );
+		$this->loader->add_shortcode( 'simple-mortgage-calculator', $plugin_public, 'shortcode', 10, 2 );
 	}
 
 	/**
