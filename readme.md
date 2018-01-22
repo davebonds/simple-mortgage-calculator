@@ -17,7 +17,9 @@ This is a simple mortgage calculator that will give a monthly payment based on t
 
 This section describes how to install the plugin and get it working.
 
-1. Install via Plugins > Add New using .zip file
+1. Install via Plugins > Add New using .zip file [master](https://github.com/davebonds/simple-mortgage-calculator/archive/master.zip)
+2. Add the Simple Mortgage Calculator Widget to any widget area via the Appearance > Widgets page.
+2a. Or add using the shortcode: `[simple-mortgage-caclulator principal="350000" down_payment="35000" term="30" apr="3.9"]`
 
 ## Frequently Asked Questions ##
 
