@@ -68,7 +68,7 @@ class Simple_Mortgage_Calculator_Widget extends WP_Widget {
 	 * @var array
 	 */
 	public $defaults = array(
-		'title'        => 'Mortgage Calulator',
+		'title'        => 'Mortgage Calculator',
 		'principal'    => 350000,
 		'down_payment' => 35000,
 		'term'         => 30,
