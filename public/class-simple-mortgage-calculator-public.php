@@ -152,6 +152,7 @@ class Simple_Mortgage_Calculator_Public {
 		// Merge atts with defaults
 		$instance = shortcode_atts(
 			array(
+				'title'        => '',
 				'principal'    => 350000,
 				'down_payment' => 35000,
 				'term'         => 30,

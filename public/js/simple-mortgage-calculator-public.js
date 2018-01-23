@@ -27,14 +27,14 @@
 			url: SMC_Ajax.ajax_url,
 			data: data,
 			success: function(response) {
-				// if ( isNaN(response) ) {
-				// 	return false;
-				// } else {
+				if ( response === 'nan' ) {
+					return false;
+				} else {
 					// Hide loader
 					$('.simple-mortgage-calculator .loader').hide();
 					// Output response
 					$('.monthly-payment input').val( response );
-				// }
+				}
 			}
 		});
 		
@@ -65,14 +65,14 @@
 			url: SMC_Ajax.ajax_url,
 			data: data,
 			success: function(response) {
-				// if ( isNaN(response) ) {
-				// 	return false;
-				// } else {
+				if ( response === 'nan' ) {
+					return false;
+				} else {
 					// Hide loader
 					$('.simple-mortgage-calculator .loader').hide();
 					// Output response
 					$('.monthly-payment input').val( response );
-				// }
+				}
 			}
 		});
 		
